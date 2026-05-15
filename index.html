@@ -1,157 +1,676 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anteneh.dev - Soluciones Tecnológicas Profesionales</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-    <!-- NAVEGACIÓN PRINCIPAL -->
-    <header class="cabecera">
-        <nav class="barra-navegacion">
-            <!-- Logo -->
-            <div class="logo-marca">
-                <a href="#inicio" class="enlace-logo">
-                    <span class="iso-logo">&lt;A/&gt;</span>
-                    <span class="texto-logo">Anteneh.dev</span>
-                </a>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Anteneh Rocha — Especialista en Desarrollo Web y Sistemas. DAW + SMR. Vigo, España."
+    />
+    <title>Anteneh Rocha — Desarrollo Web & Sistemas</title>
 
-            <!-- Menú -->
-            <ul class="menu-navegacion">
-                <li><a href="#inicio" class="enlace-menu">Inicio</a></li>
-                <li><a href="#habilidades" class="enlace-menu">Habilidades</a></li>
-            </ul>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body>
+    <!-- ═══════════════════════════════════════════════
+         CABECERA FIJA
+    ═══════════════════════════════════════════════ -->
+    <header class="cabecera" role="banner">
+      <div class="cabecera-interior">
+        <a
+          href="#inicio"
+          class="logo-tipografico"
+          aria-label="Inicio — Anteneh Rocha"
+        >
+          <span class="logo-iso" aria-hidden="true">&lt;A/&gt;</span>
+          <span class="logo-nombre">Anteneh.dev</span>
+        </a>
+
+        <nav class="navegacion-principal" aria-label="Navegación principal">
+          <ul class="lista-navegacion" role="list">
+            <li><a href="#inicio" class="enlace-nav">Perfil</a></li>
+            <li><a href="#competencias" class="enlace-nav">Competencias</a></li>
+            <li><a href="#formacion" class="enlace-nav">Formación</a></li>
+            <li><a href="#soluciones" class="enlace-nav">Soluciones</a></li>
+            <li>
+              <a href="#contacto" class="enlace-nav enlace-nav--activo"
+                >Contactar</a
+              >
+            </li>
+          </ul>
         </nav>
+
+        <div class="cabecera-contacto" aria-label="Redes sociales">
+          <a
+            href="https://es.linkedin.com/in/anteneh-rocha-otero"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="icono-social"
+            aria-label="LinkedIn"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+              />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+          <a
+            href="https://github.com/AntenehRocha"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="icono-social"
+            aria-label="GitHub"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+              />
+            </svg>
+          </a>
+          <a
+            href="mailto:contacto@anteneh.dev"
+            class="icono-social"
+            aria-label="Correo electrónico"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+          </a>
+        </div>
+      </div>
     </header>
 
-    <main>
-        <!-- SECCIÓN HERO / PRESENTACIÓN PRINCIPAL -->
-        <section id="inicio" class="seccion-hero">
-            <div class="contenedor-principal">
-                <div class="contenido-hero">
-                    <h1 class="titulo-hero">
-                        Desarrollo de <span class="destacado">Soluciones&nbsp;Tecnológicas</span> para transformar&nbsp;negocios
-                    </h1>
-                    <p class="subtitulo-hero">
-                        No solo código. Creo aplicaciones web escalables, optimizadas y centradas en resolver los desafíos reales de tu empresa. Desde arquitectura hasta implementación, entrego soluciones completas que generan&nbsp;impacto.
-                    </p>
+    <main id="inicio">
+      <!-- ═══════════════════════════════════════════════
+             HERO — PROPUESTA DE VALOR
+        ═══════════════════════════════════════════════ -->
+      <section class="seccion-hero" aria-label="Presentación profesional">
+        <div class="hero-cuadricula">
+          <div class="hero-contenido">
+            <p class="etiqueta-estado">
+              <span class="punto-disponible" aria-hidden="true"></span>
+              Disponible para proyectos · Vigo, España
+            </p>
 
-                    <!-- SECCIÓN DE INSIGNIAS PROFESIONALES -->
-                    <div class="seccion-redes-profesionales">
-                        <h2 class="titulo-redes">Conecta conmigo</h2>
-                        <div class="contenedor-insignias">
-                            <!-- LinkedIn Badge -->
-                            <div class="tarjeta-red tarjeta-linkedin">
-                                <div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="anteneh-rocha-otero" data-version="v1">
-                                    <a class="badge-base__link LI-simple-link" href="https://es.linkedin.com/in/anteneh-rocha-otero?trk=profile-badge" target="_blank" rel="noopener noreferrer"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <h1 class="titular-principal">
+              De la infraestructura<br />
+              <em class="titular-cursiva">al código.</em>
+            </h1>
+
+            <p class="subtitular-hero">
+              Especialista técnico con dominio dual en administración de
+              sistemas y desarrollo web. Mi formación en SMR y DAW me permite
+              entender las aplicaciones desde el servidor hasta el navegador — y
+              resolver los problemas que otros no ven.
+            </p>
+
+            <div class="hero-acciones">
+              <a href="#contacto" class="boton boton-primario"
+                >Iniciar conversación</a
+              >
+              <a href="#soluciones" class="boton boton-fantasma"
+                >Ver soluciones</a
+              >
             </div>
-        </section>
+          </div>
 
-        <!-- SECCIÓN DE HABILIDADES / HERRAMIENTAS -->
-        <section id="habilidades" class="seccion-habilidades">
-            <div class="contenedor-principal">
-                <div class="encabezado-seccion">
-                    <h2 class="titulo-seccion">Stack Tecnológico</h2>
-                    <p class="descripcion-seccion">Herramientas y tecnologías con las que construyo soluciones profesionales</p>
-                </div>
-
-                <!-- Frontend -->
-                <div class="grupo-habilidades">
-                    <h3 class="nombre-grupo-habilidades">Frontend & Diseño</h3>
-                    <div class="cuadricula-habilidades">
-                        <div class="etiqueta-habilidad">HTML5</div>
-                        <div class="etiqueta-habilidad">CSS3</div>
-                        <div class="etiqueta-habilidad">Responsive Design</div>
-                        <div class="etiqueta-habilidad">Accesibilidad Web</div>
-                        <div class="etiqueta-habilidad">UX/UI Principles</div>
-                        <div class="etiqueta-habilidad">Layouts Modernos</div>
-                    </div>
-                </div>
-
-                <!-- Backend -->
-                <div class="grupo-habilidades">
-                    <h3 class="nombre-grupo-habilidades">Backend & Lógica</h3>
-                    <div class="cuadricula-habilidades">
-                        <div class="etiqueta-habilidad">Java</div>
-                        <div class="etiqueta-habilidad">Python</div>
-                        <div class="etiqueta-habilidad">Algoritmos</div>
-                        <div class="etiqueta-habilidad">POO</div>
-                        <div class="etiqueta-habilidad">Patrones de Diseño</div>
-                        <div class="etiqueta-habilidad">API REST</div>
-                    </div>
-                </div>
-
-                <!-- Bases de Datos -->
-                <div class="grupo-habilidades">
-                    <h3 class="nombre-grupo-habilidades">Bases de Datos</h3>
-                    <div class="cuadricula-habilidades">
-                        <div class="etiqueta-habilidad">SQL</div>
-                        <div class="etiqueta-habilidad">Diseño Relacional</div>
-                        <div class="etiqueta-habilidad">Optimización</div>
-                        <div class="etiqueta-habilidad">Consultas Complejas</div>
-                        <div class="etiqueta-habilidad">Transacciones</div>
-                        <div class="etiqueta-habilidad">Integridad de Datos</div>
-                    </div>
-                </div>
-
-                <!-- Herramientas -->
-                <div class="grupo-habilidades">
-                    <h3 class="nombre-grupo-habilidades">Herramientas & Metodología</h3>
-                    <div class="cuadricula-habilidades">
-                        <div class="etiqueta-habilidad">Git & GitHub</div>
-                        <div class="etiqueta-habilidad">Testing</div>
-                        <div class="etiqueta-habilidad">Debugging</div>
-                        <div class="etiqueta-habilidad">Versionado</div>
-                        <div class="etiqueta-habilidad">Documentación</div>
-                        <div class="etiqueta-habilidad">Performance</div>
-                    </div>
-                </div>
+          <aside class="hero-metricas" aria-label="Métricas clave">
+            <div class="metrica-item">
+              <span class="metrica-numero" aria-label="Más de 20 tecnologías"
+                >20+</span
+              >
+              <span class="metrica-etiqueta">Tecnologías</span>
             </div>
-        </section>
+            <div class="metrica-separador" aria-hidden="true"></div>
+            <div class="metrica-item">
+              <span class="metrica-numero" aria-label="2 ciclos formativos"
+                >2</span
+              >
+              <span class="metrica-etiqueta">Ciclos Formativos</span>
+            </div>
+            <div class="metrica-separador" aria-hidden="true"></div>
+            <div class="metrica-item">
+              <span class="metrica-numero" aria-label="Full-Stack">FS</span>
+              <span class="metrica-etiqueta">Perfil Híbrido</span>
+            </div>
+          </aside>
+        </div>
+
+        <div class="hero-barra-tech" aria-label="Stack tecnológico" role="list">
+          <span role="listitem">Linux</span>
+          <span aria-hidden="true">·</span>
+          <span role="listitem">Windows Server</span>
+          <span aria-hidden="true">·</span>
+          <span role="listitem">HTML5</span>
+          <span aria-hidden="true">·</span>
+          <span role="listitem">CSS3</span>
+          <span aria-hidden="true">·</span>
+          <span role="listitem">JavaScript</span>
+          <span aria-hidden="true">·</span>
+          <span role="listitem">Java</span>
+          <span aria-hidden="true">·</span>
+          <span role="listitem">SQL</span>
+          <span aria-hidden="true">·</span>
+          <span role="listitem">MySQL</span>
+          <span aria-hidden="true">·</span>
+          <span role="listitem">Node.js</span>
+          <span aria-hidden="true">·</span>
+          <span role="listitem">Git</span>
+          <span aria-hidden="true">·</span>
+          <span role="listitem">Redes TCP/IP</span>
+          <span aria-hidden="true">·</span>
+          <span role="listitem">Vercel</span>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+             COMPETENCIAS TÉCNICAS — DOS PILARES
+        ═══════════════════════════════════════════════ -->
+      <section
+        id="competencias"
+        class="seccion-competencias"
+        aria-labelledby="titulo-competencias"
+      >
+        <div class="encabezado-seccion">
+          <span class="etiqueta-seccion">Áreas de Expertise</span>
+          <h2 class="titulo-seccion" id="titulo-competencias">
+            Competencias Técnicas
+          </h2>
+          <p class="descripcion-seccion">
+            Dos disciplinas. Una visión técnica completa que cubre desde la
+            infraestructura hasta la interfaz de usuario.
+          </p>
+        </div>
+
+        <div class="cuadricula-pilares">
+          <!-- PILAR DAW -->
+          <article class="pilar-tarjeta pilar-tarjeta--daw">
+            <header class="pilar-cabecera">
+              <div class="pilar-icono" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <div>
+                <span class="pilar-label">DAW · 1º Curso</span>
+                <h3 class="pilar-titulo">Desarrollo Web</h3>
+              </div>
+            </header>
+
+            <div class="cuadricula-habilidades">
+              <div class="tarjeta-habilidad">
+                <span class="habilidad-nombre">Frontend</span>
+                <span class="habilidad-detalle"
+                  >HTML5, CSS3, JavaScript ES6+, diseño responsivo,
+                  accesibilidad WCAG</span
+                >
+              </div>
+              <div class="tarjeta-habilidad">
+                <span class="habilidad-nombre">Backend</span>
+                <span class="habilidad-detalle"
+                  >Node.js, Express, APIs REST, autenticación JWT, httpOnly
+                  Cookies</span
+                >
+              </div>
+              <div class="tarjeta-habilidad">
+                <span class="habilidad-nombre">Bases de Datos</span>
+                <span class="habilidad-detalle"
+                  >MySQL, diseño relacional, SQL avanzado, modelado UML,
+                  DataGrip</span
+                >
+              </div>
+              <div class="tarjeta-habilidad">
+                <span class="habilidad-nombre">Lógica y OOP</span>
+                <span class="habilidad-detalle"
+                  >Java, Python, principios SOLID, herencia, interfaces,
+                  polimorfismo</span
+                >
+              </div>
+              <div class="tarjeta-habilidad">
+                <span class="habilidad-nombre">Despliegue</span>
+                <span class="habilidad-detalle"
+                  >Vercel, Railway, variables de entorno, pipelines CI/CD
+                  básico</span
+                >
+              </div>
+              <div class="tarjeta-habilidad">
+                <span class="habilidad-nombre">Herramientas</span>
+                <span class="habilidad-detalle"
+                  >Git, GitHub, VS Code, Postman, DBeaver, draw.io, npm</span
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- PILAR SMR -->
+          <article class="pilar-tarjeta pilar-tarjeta--smr">
+            <header class="pilar-cabecera">
+              <div class="pilar-icono" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="8" rx="2" />
+                  <rect x="2" y="14" width="20" height="8" rx="2" />
+                  <line x1="6" y1="6" x2="6.01" y2="6" />
+                  <line x1="6" y1="18" x2="6.01" y2="18" />
+                </svg>
+              </div>
+              <div>
+                <span class="pilar-label">SMR · Ciclo Medio</span>
+                <h3 class="pilar-titulo">Sistemas & Redes</h3>
+              </div>
+            </header>
+
+            <div class="cuadricula-habilidades">
+              <div class="tarjeta-habilidad">
+                <span class="habilidad-nombre">Sistemas Operativos</span>
+                <span class="habilidad-detalle"
+                  >Administración Linux (Debian/Ubuntu) y Windows Server,
+                  scripting bash, gestión de usuarios y permisos</span
+                >
+              </div>
+              <div class="tarjeta-habilidad">
+                <span class="habilidad-nombre">Redes</span>
+                <span class="habilidad-detalle"
+                  >TCP/IP, subnetting, switches, routers, VLANs, DHCP, DNS,
+                  configuración de dispositivos Cisco</span
+                >
+              </div>
+              <div class="tarjeta-habilidad">
+                <span class="habilidad-nombre">Seguridad</span>
+                <span class="habilidad-detalle"
+                  >Firewalls, cifrado, control de acceso, VPN, políticas de
+                  seguridad, copias de seguridad RTO/RPO</span
+                >
+              </div>
+              <div class="tarjeta-habilidad">
+                <span class="habilidad-nombre">Servidores</span>
+                <span class="habilidad-detalle"
+                  >Despliegue y configuración de servidores web (Apache, Nginx),
+                  FTP, SSH, RDP, acceso remoto</span
+                >
+              </div>
+              <div class="tarjeta-habilidad">
+                <span class="habilidad-nombre">Hardware</span>
+                <span class="habilidad-detalle"
+                  >Diagnóstico, ensamblaje, reparación, instalación de drivers y
+                  componentes, troubleshooting avanzado</span
+                >
+              </div>
+              <div class="tarjeta-habilidad">
+                <span class="habilidad-nombre">Soporte Técnico</span>
+                <span class="habilidad-detalle"
+                  >Atención a usuarios, resolución de incidencias, documentación
+                  técnica, mantenimiento preventivo</span
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+             FORMACIÓN
+        ═══════════════════════════════════════════════ -->
+      <section
+        id="formacion"
+        class="seccion-formacion"
+        aria-labelledby="titulo-formacion"
+      >
+        <div class="encabezado-seccion encabezado-seccion--oscuro">
+          <span class="etiqueta-seccion">Trayectoria Académica</span>
+          <h2 class="titulo-seccion" id="titulo-formacion">
+            Formación Profesional
+          </h2>
+        </div>
+
+        <div class="linea-tiempo" role="list">
+          <div class="hito-formacion" role="listitem">
+            <div class="hito-meta">
+              <span class="hito-ciclo">Completado</span>
+              <span class="hito-codigo">CFGM · SMR</span>
+            </div>
+            <div class="hito-contenido">
+              <h3 class="hito-titulo">Sistemas Microinformáticos y Redes</h3>
+              <p class="hito-descripcion">
+                Formación técnica completa en administración de
+                infraestructuras, configuración de redes corporativas, seguridad
+                informática y soporte técnico a usuarios. Base sólida para
+                entender qué hay detrás de cualquier aplicación: el servidor, la
+                red, el hardware.
+              </p>
+              <ul class="hito-modulos" role="list">
+                <li>Implantación de Sistemas Operativos</li>
+                <li>Redes Locales</li>
+                <li>Seguridad Informática</li>
+                <li>Servicios en Red</li>
+                <li>Soporte Técnico</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="hito-formacion hito-formacion--activo" role="listitem">
+            <div class="hito-meta">
+              <span class="hito-ciclo hito-ciclo--activo"
+                >En curso · 2024–2025</span
+              >
+              <span class="hito-codigo">CFGS · DAW</span>
+            </div>
+            <div class="hito-contenido">
+              <h3 class="hito-titulo">Desarrollo de Aplicaciones Web — 1º</h3>
+              <p class="hito-descripcion">
+                Especialización en programación orientada a objetos,
+                arquitectura de aplicaciones web, diseño de bases de datos
+                relacionales y despliegue de software. Desarrollo de proyectos
+                reales full-stack con tecnologías actuales de la industria.
+              </p>
+              <ul class="hito-modulos" role="list">
+                <li>Programación (Java)</li>
+                <li>Bases de Datos (SQL/MySQL)</li>
+                <li>Lenguajes de Marcas (HTML5/CSS3)</li>
+                <li>Entornos de Desarrollo</li>
+                <li>Sistemas Informáticos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+             SOLUCIONES PARA EMPRESAS
+        ═══════════════════════════════════════════════ -->
+      <section
+        id="soluciones"
+        class="seccion-soluciones"
+        aria-labelledby="titulo-soluciones"
+      >
+        <div class="encabezado-seccion">
+          <span class="etiqueta-seccion">Propuesta de Valor</span>
+          <h2 class="titulo-seccion" id="titulo-soluciones">
+            Problemas que Resuelvo
+          </h2>
+          <p class="descripcion-seccion">
+            No vendo tecnología. Vendo soluciones a problemas reales que
+            ralentizan y encarecen el negocio.
+          </p>
+        </div>
+
+        <div class="cuadricula-soluciones">
+          <article class="tarjeta-solucion">
+            <div class="solucion-numero" aria-hidden="true">01</div>
+            <h3 class="solucion-titulo">
+              Migración y Optimización de Sistemas
+            </h3>
+            <p class="solucion-descripcion">
+              Evaluación, planificación y ejecución de migraciones a entornos
+              más eficientes. Reducción de costes operativos mediante una
+              arquitectura de infraestructura más limpia y documentada.
+            </p>
+            <span class="solucion-tag">SMR + DAW</span>
+          </article>
+
+          <article class="tarjeta-solucion">
+            <div class="solucion-numero" aria-hidden="true">02</div>
+            <h3 class="solucion-titulo">Desarrollo de Herramientas Internas</h3>
+            <p class="solucion-descripcion">
+              Aplicaciones web a medida para automatizar procesos internos:
+              gestión de inventario, paneles de control, formularios, reportes
+              automáticos. Código limpio, mantenible y documentado.
+            </p>
+            <span class="solucion-tag">Full-Stack</span>
+          </article>
+
+          <article class="tarjeta-solucion">
+            <div class="solucion-numero" aria-hidden="true">03</div>
+            <h3 class="solucion-titulo">Estructuración y Gestión de Datos</h3>
+            <p class="solucion-descripcion">
+              Diseño de bases de datos relacionales normalizadas, optimización
+              de consultas lentas, migración desde hojas de cálculo a sistemas
+              robustos. Los datos de tu empresa ordenados y accesibles.
+            </p>
+            <span class="solucion-tag">SQL · MySQL</span>
+          </article>
+
+          <article class="tarjeta-solucion">
+            <div class="solucion-numero" aria-hidden="true">04</div>
+            <h3 class="solucion-titulo">Configuración de Redes y Servidores</h3>
+            <p class="solucion-descripcion">
+              Instalación, configuración y securización de infraestructuras de
+              red corporativas. Despliegue de servidores, políticas de acceso,
+              VPN y monitorización de entornos críticos.
+            </p>
+            <span class="solucion-tag">SMR · Redes</span>
+          </article>
+
+          <article class="tarjeta-solucion">
+            <div class="solucion-numero" aria-hidden="true">05</div>
+            <h3 class="solucion-titulo">Soporte Técnico Avanzado</h3>
+            <p class="solucion-descripcion">
+              Resolución de incidencias de hardware y software, mantenimiento
+              preventivo, gestión de parque informático. Documentación técnica
+              clara para que el equipo opere de forma autónoma.
+            </p>
+            <span class="solucion-tag">SMR · Hardware</span>
+          </article>
+
+          <article class="tarjeta-solucion tarjeta-solucion--contacto">
+            <div class="solucion-numero" aria-hidden="true">→</div>
+            <h3 class="solucion-titulo">¿Tienes otro problema técnico?</h3>
+            <p class="solucion-descripcion">
+              Si tu necesidad no está aquí, cuéntamela. Mi perfil híbrido me
+              permite adaptarme a retos técnicos variados con rapidez y
+              criterio.
+            </p>
+            <a href="#contacto" class="boton boton-primario boton--pequeno"
+              >Hablemos</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+             CONTACTO
+        ═══════════════════════════════════════════════ -->
+      <section
+        id="contacto"
+        class="seccion-contacto"
+        aria-labelledby="titulo-contacto"
+      >
+        <div class="contacto-interior">
+          <div class="contacto-texto">
+            <span class="etiqueta-seccion">Contacto Directo</span>
+            <h2 class="titulo-contacto" id="titulo-contacto">
+              ¿Listo para<br />colaborar?
+            </h2>
+            <p class="descripcion-contacto">
+              Estoy disponible para prácticas, proyectos freelance y
+              oportunidades laborales en Vigo y alrededores. Respondo en menos
+              de 24h.
+            </p>
+          </div>
+
+          <div class="contacto-canales">
+            <a href="mailto:contacto@anteneh.dev" class="canal-contacto">
+              <span class="canal-icono" aria-hidden="true">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </span>
+              <div class="canal-info">
+                <span class="canal-titulo">Correo Electrónico</span>
+                <span class="canal-valor">contacto@anteneh.dev</span>
+              </div>
+              <span class="canal-flecha" aria-hidden="true">→</span>
+            </a>
+
+            <a
+              href="https://es.linkedin.com/in/anteneh-rocha-otero"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="canal-contacto"
+            >
+              <span class="canal-icono" aria-hidden="true">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </span>
+              <div class="canal-info">
+                <span class="canal-titulo">LinkedIn</span>
+                <span class="canal-valor">Anteneh Rocha Otero</span>
+              </div>
+              <span class="canal-flecha" aria-hidden="true">→</span>
+            </a>
+
+            <a
+              href="https://github.com/AntenehRocha"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="canal-contacto"
+            >
+              <span class="canal-icono" aria-hidden="true">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                  />
+                </svg>
+              </span>
+              <div class="canal-info">
+                <span class="canal-titulo">GitHub</span>
+                <span class="canal-valor">@AntenehRocha</span>
+              </div>
+              <span class="canal-flecha" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- PIE DE PÁGINA -->
-    <footer class="pie-pagina">
-        <div class="contenedor-principal">
-            <div class="contenido-pie">
-                <div class="columna-pie">
-                    <h4 class="titulo-pie">Anteneh.dev</h4>
-                    <p class="descripcion-pie">Soluciones tecnológicas profesionales para transformar tu negocio.</p>
-                </div>
-                <div class="columna-pie">
-                    <h4 class="titulo-pie">Navegación</h4>
-                    <ul class="lista-pie">
-                        <li><a href="#inicio" class="enlace-pie">Inicio</a></li>
-                        <li><a href="#habilidades" class="enlace-pie">Habilidades</a></li>
-                    </ul>
-                </div>
-                <div class="columna-pie">
-                    <h4 class="titulo-pie">Profesional</h4>
-                    <ul class="lista-redes">
-                        <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" class="enlace-red">GitHub</a></li>
-                        <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="enlace-red">LinkedIn</a></li>
-                        <li><a href="mailto:contacto@anteneh.dev" class="enlace-red">Email</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="linea-divisoria"></div>
-            <div class="seccion-derechos">
-                <p>&copy; 2026 Anteneh. Desarrollador Web DAW. Todos los derechos reservados.</p>
-            </div>
+    <!-- ═══════════════════════════════════════════════
+         PIE DE PÁGINA
+    ═══════════════════════════════════════════════ -->
+    <footer class="pie-pagina" role="contentinfo">
+      <div class="pie-interior">
+        <p class="pie-copy">&copy; 2026 Anteneh Rocha · Vigo, España</p>
+        <p class="pie-credencial">CFGM SMR &nbsp;+&nbsp; CFGS DAW</p>
+        <div class="pie-redes" aria-label="Redes sociales">
+          <a
+            href="https://es.linkedin.com/in/anteneh-rocha-otero"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="pie-enlace-red"
+            aria-label="LinkedIn"
+            >LI</a
+          >
+          <a
+            href="https://github.com/AntenehRocha"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="pie-enlace-red"
+            aria-label="GitHub"
+            >GH</a
+          >
+          <a
+            href="mailto:contacto@anteneh.dev"
+            class="pie-enlace-red"
+            aria-label="Email"
+            >@</a
+          >
         </div>
+      </div>
     </footer>
-
-    <!-- Script de LinkedIn Badge -->
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-</body>
+  </body>
 </html>

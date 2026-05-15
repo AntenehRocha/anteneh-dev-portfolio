@@ -1,0 +1,856 @@
+/* ================================================================
+   ESTILOS CSS - ANTENEH.DEV
+   Landing Page Corporativa de Soluciones Tecnológicas
+   ================================================================
+   - CSS3 Puro (sin frameworks)
+   - Nomenclatura 100% en español
+   - Variables de diseño escalables
+   - Responsive Design 100%
+   - Listo para Vercel
+   ================================================================ */
+
+/* ================================================================
+   1. SISTEMA DE DISEÑO - VARIABLES GLOBALES
+   ================================================================ */
+:root {
+    /* --- COLORES --- */
+    --color-fondo: #0f0f0f;
+    --color-fondo-secundario: #1a1a1a;
+    --color-fondo-terciario: #262626;
+    --color-acento: #00d9ff;
+    --color-acento-oscuro: #0099bb;
+    --color-texto: #ffffff;
+    --color-texto-secundario: #b0b0b0;
+    --color-texto-terciario: #808080;
+    --color-borde: #333333;
+    --color-borde-acento: #00d9ff33;
+
+    /* --- TIPOGRAFÍA --- */
+    --fuente-principal: 'Inter', sans-serif;
+    --tamaño-base: 16px;
+    --tamaño-h1: 3.5rem;
+    --tamaño-h2: 2.5rem;
+    --tamaño-h3: 1.5rem;
+    --peso-normal: 400;
+    --peso-medio: 500;
+    --peso-semibold: 600;
+    --peso-bold: 700;
+    --peso-extrabold: 800;
+
+    /* --- ESPACIADO (Sistema de 8px) --- */
+    --espacio-xs: 0.5rem;
+    --espacio-sm: 1rem;
+    --espacio-md: 1.5rem;
+    --espacio-lg: 2rem;
+    --espacio-xl: 2.5rem;
+    --espacio-xxl: 3rem;
+    --espacio-xxxl: 4rem;
+    --espacio-4xl: 5rem;
+
+    /* --- BORDES Y RADIOS --- */
+    --radio-sm: 0.5rem;
+    --radio-md: 0.75rem;
+    --radio-lg: 1rem;
+    --radio-xl: 1.5rem;
+
+    /* --- SOMBRAS (Muy finas y difuminadas) --- */
+    --sombra-sm: 0 2px 8px rgba(0, 217, 255, 0.05);
+    --sombra-md: 0 4px 12px rgba(0, 217, 255, 0.08);
+    --sombra-lg: 0 8px 24px rgba(0, 217, 255, 0.1);
+    --sombra-xl: 0 12px 32px rgba(0, 217, 255, 0.12);
+
+    /* --- TRANSICIONES --- */
+    --transicion-rapida: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transicion-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transicion-lenta: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* --- DIMENSIONES --- */
+    --ancho-contenedor: 1200px;
+    --altura-cabecera: 5rem;
+}
+
+/* ================================================================
+   2. RESET Y ESTILOS BASE
+   ================================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: var(--tamaño-base);
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enlaces sin decoración por defecto */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all var(--transicion-normal);
+}
+
+/* Listas sin viñetas */
+ul, ol {
+    list-style: none;
+}
+
+/* Evitar elementos huérfanos en párrafos */
+p {
+    orphans: 3;
+    widows: 3;
+}
+
+/* Evitar huérfanos en títulos */
+h1, h2, h3, h4, h5, h6 {
+    orphans: 2;
+    widows: 2;
+}
+
+/* Imágenes responsivas */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================================================================
+   3. CONTENEDOR PRINCIPAL (Reutilizable)
+   ================================================================ */
+
+.contenedor-principal {
+    width: 100%;
+    max-width: var(--ancho-contenedor);
+    margin: 0 auto;
+    padding: 0 var(--espacio-lg);
+}
+
+/* ================================================================
+   4. HEADER Y NAVEGACIÓN
+   ================================================================ */
+
+.cabecera {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--altura-cabecera);
+    background-color: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-borde);
+    z-index: 1000;
+    box-shadow: var(--sombra-sm);
+}
+
+.barra-navegacion {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--ancho-contenedor);
+    margin: 0 auto;
+    padding: 0 var(--espacio-lg);
+}
+
+/* Logo */
+.logo-marca {
+    flex-shrink: 0;
+}
+
+.enlace-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-sm);
+    font-weight: var(--peso-extrabold);
+    font-size: 1.4rem;
+    color: var(--color-texto);
+    transition: all var(--transicion-normal);
+}
+
+.enlace-logo:hover {
+    color: var(--color-acento);
+    transform: translateY(-2px);
+}
+
+.iso-logo {
+    background: linear-gradient(135deg, var(--color-acento), #00b8d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Courier New', monospace;
+    font-weight: var(--peso-bold);
+}
+
+.texto-logo {
+    color: var(--color-texto);
+}
+
+/* Menú de navegación */
+.menu-navegacion {
+    display: flex;
+    gap: var(--espacio-4xl);
+    margin-left: auto;
+}
+
+.enlace-menu {
+    font-size: 1.05rem;
+    font-weight: var(--peso-medio);
+    color: var(--color-texto-secundario);
+    position: relative;
+    padding-bottom: var(--espacio-xs);
+    transition: all var(--transicion-normal);
+}
+
+.enlace-menu::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-acento), #00b8d4);
+    transition: width var(--transicion-normal);
+}
+
+.enlace-menu:hover {
+    color: var(--color-acento);
+}
+
+.enlace-menu:hover::after {
+    width: 100%;
+}
+
+/* ================================================================
+   5. SECCIÓN HERO / PRESENTACIÓN
+   ================================================================ */
+
+.seccion-hero {
+    padding-top: calc(var(--altura-cabecera) + var(--espacio-4xl));
+    padding-bottom: var(--espacio-4xl);
+    background: linear-gradient(180deg, rgba(0, 217, 255, 0.05) 0%, transparent 50%);
+    position: relative;
+    overflow: hidden;
+}
+
+.contenido-hero {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titulo-hero {
+    font-size: var(--tamaño-h1);
+    font-weight: var(--peso-extrabold);
+    line-height: 1.2;
+    margin-bottom: var(--espacio-lg);
+    color: var(--color-texto);
+    orphans: 4;
+    widows: 4;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.destacado {
+    background: linear-gradient(135deg, var(--color-acento), #00b8d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitulo-hero {
+    font-size: 1.25rem;
+    color: var(--color-texto-secundario);
+    line-height: 1.8;
+    margin-bottom: var(--espacio-4xl);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    orphans: 4;
+    widows: 4;
+}
+
+/* ================================================================
+   6. SECCIÓN DE REDES PROFESIONALES
+   ================================================================ */
+
+.seccion-redes-profesionales {
+    margin-bottom: var(--espacio-4xl);
+    padding: var(--espacio-xxl) 0;
+}
+
+.titulo-redes {
+    font-size: 1.3rem;
+    font-weight: var(--peso-semibold);
+    margin-bottom: var(--espacio-lg);
+    color: var(--color-texto-secundario);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contenedor-insignias {
+    display: flex;
+    gap: var(--espacio-lg);
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Tarjeta de red genérica */
+.tarjeta-red {
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-md);
+    padding: var(--espacio-md) var(--espacio-lg);
+    background-color: var(--color-fondo-secundario);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-lg);
+    transition: all var(--transicion-normal);
+    text-align: center;
+    flex: 1;
+    min-width: 220px;
+    max-width: 280px;
+}
+
+.tarjeta-red:hover {
+    border-color: var(--color-acento);
+    background-color: var(--color-fondo-terciario);
+    box-shadow: var(--sombra-md);
+    transform: translateY(-4px);
+}
+
+/* LinkedIn Badge */
+.tarjeta-linkedin {
+    flex: 1.2;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.tarjeta-linkedin .badge-base__link {
+    color: var(--color-acento);
+    font-weight: var(--peso-semibold);
+}
+
+/* ================================================================
+   7. SECCIÓN DE CAPACIDADES / LO QUE SÉ HACER
+   ================================================================ */
+
+.seccion-capacidades {
+    padding: var(--espacio-4xl) var(--espacio-lg);
+    background-color: var(--color-fondo-secundario);
+}
+
+.encabezado-seccion {
+    text-align: center;
+    margin-bottom: var(--espacio-4xl);
+}
+
+.titulo-seccion {
+    font-size: var(--tamaño-h2);
+    font-weight: var(--peso-extrabold);
+    margin-bottom: var(--espacio-md);
+    color: var(--color-texto);
+}
+
+.descripcion-seccion {
+    font-size: 1.1rem;
+    color: var(--color-texto-secundario);
+    max-width: 600px;
+    margin: 0 auto;
+    orphans: 3;
+    widows: 3;
+}
+
+/* Cuadrícula de capacidades (GRID INTELIGENTE SIN HUÉRFANOS) */
+.cuadricula-capacidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--espacio-xl);
+    margin-top: var(--espacio-xxxl);
+}
+
+/* Tarjeta de capacidad */
+.tarjeta-capacidad {
+    padding: var(--espacio-xxl);
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-lg);
+    transition: all var(--transicion-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.tarjeta-capacidad::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-acento), #00b8d4);
+    opacity: 0;
+    transition: opacity var(--transicion-normal);
+}
+
+.tarjeta-capacidad:hover::before {
+    opacity: 1;
+}
+
+.tarjeta-capacidad:hover {
+    border-color: var(--color-acento);
+    box-shadow: var(--sombra-lg);
+    transform: translateY(-8px);
+    background-color: var(--color-fondo-terciario);
+}
+
+/* Icono de capacidad */
+.icono-capacidad {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 184, 212, 0.2));
+    border: 1px solid var(--color-borde-acento);
+    border-radius: var(--radio-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--espacio-lg);
+}
+
+.simbolo-capacidad {
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, var(--color-acento), #00b8d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: var(--peso-bold);
+}
+
+.titulo-capacidad {
+    font-size: 1.3rem;
+    font-weight: var(--peso-bold);
+    margin-bottom: var(--espacio-md);
+    color: var(--color-texto);
+    orphans: 3;
+    widows: 3;
+}
+
+.descripcion-capacidad {
+    font-size: 0.95rem;
+    color: var(--color-texto-secundario);
+    line-height: 1.7;
+    margin-bottom: var(--espacio-lg);
+    orphans: 3;
+    widows: 3;
+}
+
+/* Lista de características */
+.lista-caracteristicas {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-sm);
+    margin-top: var(--espacio-lg);
+    padding-top: var(--espacio-lg);
+    border-top: 1px solid var(--color-borde);
+}
+
+.lista-caracteristicas li {
+    font-size: 0.9rem;
+    color: var(--color-texto-terciario);
+    padding-left: var(--espacio-md);
+    position: relative;
+}
+
+.lista-caracteristicas li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-acento);
+    font-weight: var(--peso-bold);
+}
+
+/* ================================================================
+   8. SECCIÓN DE HABILIDADES
+   ================================================================ */
+
+.seccion-habilidades {
+    padding: var(--espacio-4xl) var(--espacio-lg);
+    background-color: var(--color-fondo);
+}
+
+/* Grupos de habilidades */
+.grupo-habilidades {
+    margin-bottom: var(--espacio-4xl);
+}
+
+.grupo-habilidades:last-child {
+    margin-bottom: 0;
+}
+
+.nombre-grupo-habilidades {
+    font-size: 1.3rem;
+    font-weight: var(--peso-bold);
+    margin-bottom: var(--espacio-lg);
+    color: var(--color-texto);
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-sm);
+}
+
+.nombre-grupo-habilidades::before {
+    content: '';
+    width: 4px;
+    height: 1.5rem;
+    background: linear-gradient(180deg, var(--color-acento), #00b8d4);
+    border-radius: 2px;
+}
+
+/* Cuadrícula de etiquetas de habilidades */
+.cuadricula-habilidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--espacio-md);
+}
+
+.etiqueta-habilidad {
+    padding: var(--espacio-md) var(--espacio-lg);
+    background-color: var(--color-fondo-terciario);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-md);
+    font-size: 0.95rem;
+    font-weight: var(--peso-medium);
+    text-align: center;
+    color: var(--color-texto-secundario);
+    transition: all var(--transicion-normal);
+    cursor: default;
+}
+
+.etiqueta-habilidad:hover {
+    border-color: var(--color-acento);
+    background-color: var(--color-borde-acento);
+    color: var(--color-acento);
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-sm);
+}
+
+/* ================================================================
+   9. PIE DE PÁGINA
+   ================================================================ */
+
+.pie-pagina {
+    background-color: var(--color-fondo-secundario);
+    border-top: 1px solid var(--color-borde);
+    padding: var(--espacio-4xl) var(--espacio-lg) var(--espacio-lg);
+}
+
+.contenido-pie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--espacio-xl);
+    margin-bottom: var(--espacio-xxl);
+    max-width: var(--ancho-contenedor);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.columna-pie {
+    padding: 0 var(--espacio-lg);
+}
+
+.titulo-pie {
+    font-size: 1rem;
+    font-weight: var(--peso-bold);
+    margin-bottom: var(--espacio-md);
+    color: var(--color-texto);
+}
+
+.descripcion-pie {
+    font-size: 0.9rem;
+    color: var(--color-texto-terciario);
+    line-height: 1.6;
+}
+
+.lista-pie, .lista-redes {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-sm);
+}
+
+.enlace-pie, .enlace-red {
+    font-size: 0.9rem;
+    color: var(--color-texto-terciario);
+    transition: all var(--transicion-normal);
+    display: inline-block;
+}
+
+.enlace-pie:hover, .enlace-red:hover {
+    color: var(--color-acento);
+    transform: translateX(4px);
+}
+
+.linea-divisoria {
+    height: 1px;
+    background-color: var(--color-borde);
+    margin: var(--espacio-xl) 0;
+    max-width: var(--ancho-contenedor);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.seccion-derechos {
+    text-align: center;
+    max-width: var(--ancho-contenedor);
+    margin: 0 auto;
+}
+
+.seccion-derechos p {
+    font-size: 0.85rem;
+    color: var(--color-texto-terciario);
+}
+
+/* ================================================================
+   10. MEDIA QUERIES - RESPONSIVE DESIGN
+   ================================================================ */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    :root {
+        --tamaño-h1: 2.8rem;
+        --tamaño-h2: 2rem;
+        --espacio-xl: 2rem;
+        --espacio-4xl: 3rem;
+    }
+
+    .menu-navegacion {
+        gap: var(--espacio-lg);
+    }
+
+    .cuadricula-capacidades {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .cuadricula-habilidades {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+/* Dispositivos móviles (max-width: 768px) */
+@media (max-width: 768px) {
+    :root {
+        --tamaño-h1: 2rem;
+        --tamaño-h2: 1.5rem;
+        --espacio-lg: 1.5rem;
+        --espacio-xl: 1.5rem;
+        --espacio-4xl: 2.5rem;
+        --altura-cabecera: 4.5rem;
+    }
+
+    .contenedor-principal {
+        padding: 0 var(--espacio-md);
+    }
+
+    /* Navegación móvil */
+    .menu-navegacion {
+        gap: var(--espacio-lg);
+        font-size: 0.85rem;
+    }
+
+    .enlace-logo {
+        font-size: 1rem;
+    }
+
+    .iso-logo {
+        display: none;
+    }
+
+    /* Hero móvil */
+    .titulo-hero {
+        font-size: 1.8rem;
+    }
+
+    .subtitulo-hero {
+        font-size: 1rem;
+    }
+
+    /* Redes profesionales móvil */
+    .contenedor-insignias {
+        flex-direction: column;
+        gap: var(--espacio-md);
+    }
+
+    .tarjeta-red {
+        max-width: 100%;
+        flex-direction: row;
+    }
+
+    .tarjeta-linkedin {
+        max-width: 100%;
+    }
+
+    /* Capacidades móvil */
+    .seccion-capacidades {
+        padding: var(--espacio-xl) var(--espacio-md);
+    }
+
+    .cuadricula-capacidades {
+        grid-template-columns: 1fr;
+        gap: var(--espacio-lg);
+    }
+
+    .tarjeta-capacidad {
+        padding: var(--espacio-lg);
+    }
+
+    /* Habilidades móvil */
+    .seccion-habilidades {
+        padding: var(--espacio-xl) var(--espacio-md);
+    }
+
+    .cuadricula-habilidades {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: var(--espacio-sm);
+    }
+
+    .etiqueta-habilidad {
+        padding: var(--espacio-sm) var(--espacio-md);
+        font-size: 0.85rem;
+    }
+
+    /* Pie móvil */
+    .pie-pagina {
+        padding: var(--espacio-xl) var(--espacio-md) var(--espacio-md);
+    }
+
+    .contenido-pie {
+        grid-template-columns: 1fr;
+        gap: var(--espacio-lg);
+    }
+
+    .columna-pie {
+        padding: 0;
+    }
+
+    .linea-divisoria {
+        margin: var(--espacio-lg) 0;
+    }
+}
+
+/* Dispositivos muy pequeños (max-width: 480px) */
+@media (max-width: 480px) {
+    :root {
+        --tamaño-h1: 1.5rem;
+        --tamaño-h2: 1.25rem;
+        --espacio-lg: 1rem;
+        --espacio-4xl: 1.5rem;
+        --altura-cabecera: 3.5rem;
+    }
+
+    .cabecera {
+        height: var(--altura-cabecera);
+    }
+
+    .seccion-hero {
+        padding-top: calc(var(--altura-cabecera) + var(--espacio-lg));
+        padding-bottom: var(--espacio-xl);
+    }
+
+    .contenedor-principal {
+        padding: 0 var(--espacio-sm);
+    }
+
+    .enlace-menu {
+        font-size: 0.8rem;
+    }
+
+    .menu-navegacion {
+        gap: var(--espacio-sm);
+    }
+
+    .titulo-hero {
+        font-size: 1.3rem;
+        margin-bottom: var(--espacio-md);
+    }
+
+    .subtitulo-hero {
+        font-size: 0.95rem;
+        margin-bottom: var(--espacio-lg);
+    }
+
+    .numero-stat {
+        font-size: 2rem;
+    }
+
+    .encabezado-seccion {
+        margin-bottom: var(--espacio-xl);
+    }
+
+    .titulo-seccion {
+        font-size: 1.3rem;
+    }
+
+    .descripcion-seccion {
+        font-size: 0.95rem;
+    }
+
+    .cuadricula-capacidades {
+        gap: var(--espacio-md);
+    }
+
+    .tarjeta-capacidad {
+        padding: var(--espacio-md);
+    }
+
+    .titulo-capacidad {
+        font-size: 1.1rem;
+    }
+
+    .descripcion-capacidad {
+        font-size: 0.85rem;
+    }
+
+    .nombre-grupo-habilidades {
+        font-size: 1.1rem;
+    }
+
+    .cuadricula-habilidades {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .etiqueta-habilidad {
+        font-size: 0.75rem;
+        padding: var(--espacio-xs) var(--espacio-sm);
+    }
+}
+
+/* ================================================================
+   11. ACCESIBILIDAD
+   ================================================================ */
+
+/* Navegación por teclado */
+:focus-visible {
+    outline: 2px solid var(--color-acento);
+    outline-offset: 2px;
+}
+
+/* Respeto a preferencias de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

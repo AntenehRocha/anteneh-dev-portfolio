@@ -211,17 +211,23 @@ svg {
 }
 
 /* Descarga del cv en nav */
-
-descarga-cv {
-  font-size: var(--texto-sm);
-  font-weight: var(--peso-medio);
-  color: var(--gris-300);
-  transition: color var(--trans-rapida);
+.descarga-cv {
+  color: var(--negro);
+  background: var(--blanco);
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-weight: var(--peso-negro);
+  transition:
+    background var(--trans-rapida),
+    color var(--trans-rapida),
+    transform var(--trans-rapida);
+  display: inline-block;
   letter-spacing: -0.01em;
 }
 
-descarga-cv:hover {
-  color: var(--blanco);
+.descarga-cv:hover {
+  color: var(--negro);
+  transform: scale(1.08);
 }
 
 /* Iconos sociales en cabecera */
@@ -1012,12 +1018,21 @@ descarga-cv:hover {
     display: none;
   }
 
-  /* Mostrar sólo Contactar y el logo en móvil pequeño */
+  /* Mostrar sólo Contactar y Descargar CV en móvil pequeño */
   .lista-navegacion li:nth-child(-n + 4) {
     display: none;
   }
   .lista-navegacion li:last-child {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    flex-wrap: wrap;
+  }
+
+  .enlace-nav--activo,
+  .descarga-cv {
+    display: inline-block;
+    white-space: nowrap;
   }
 
   .seccion-hero {

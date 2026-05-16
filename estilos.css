@@ -223,6 +223,7 @@ svg {
     transform var(--trans-rapida);
   display: inline-block;
   letter-spacing: -0.01em;
+  cursor: pointer;
 }
 
 .descarga-cv:hover {
@@ -1025,7 +1026,7 @@ svg {
   .lista-navegacion li:last-child {
     display: flex;
     align-items: center;
-    gap: var(--s-2);
+    gap: var(--s-3);
     flex-wrap: wrap;
   }
 

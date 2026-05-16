@@ -210,6 +210,20 @@ svg {
   opacity: 0.8;
 }
 
+/* Descarga del cv en nav */
+
+descarga-cv {
+  font-size: var(--texto-sm);
+  font-weight: var(--peso-medio);
+  color: var(--gris-300);
+  transition: color var(--trans-rapida);
+  letter-spacing: -0.01em;
+}
+
+descarga-cv:hover {
+  color: var(--blanco);
+}
+
 /* Iconos sociales en cabecera */
 .cabecera-contacto {
   display: flex;

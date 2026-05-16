@@ -1,0 +1,28 @@
+name: Notificar push por correo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  enviar-correo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar email de notificación
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.GMAIL_USER }}
+          password: ${{ secrets.GMAIL_PASS }}
+          subject: "🚀 Nuevo push en ${{ github.repository }}"
+          to: antenehrochaaotero.dev@gmail.com
+          from: Anteneh Dev Portfolio
+          body: |
+            Se ha hecho un push al repositorio ${{ github.repository }}
+
+            👤 Autor: ${{ github.actor }}
+            🌿 Rama: ${{ github.ref_name }}
+            💬 Commit: ${{ github.event.head_commit.message }}
+            🔗 Ver cambios: ${{ github.event.compare }}
